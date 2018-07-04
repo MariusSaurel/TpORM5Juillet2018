@@ -42,7 +42,12 @@ public class Client {
     )
     protected List<CompteBancaire> Compte;
     
-    @Embedded
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "CONTACT_GESTION",
+            joinColumns = @JoinColumn(name = "idClient"),
+            inverseJoinColumns = @JoinColumn(name = "idContact")
+    )
     protected Contact contact;
     
     @OneToMany(cascade = CascadeType.ALL)
