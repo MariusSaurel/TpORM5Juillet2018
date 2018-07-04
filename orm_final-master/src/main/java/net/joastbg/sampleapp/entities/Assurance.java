@@ -17,7 +17,7 @@ import javax.persistence.Table;
 @Entity
 @Table (name ="ASSURANCE")
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Assurance implements Serializable {
+public class Assurance  {
 
      
     protected static final long serialVersionUID = 1L;

@@ -23,7 +23,7 @@ import javax.persistence.Table;
 @Table(name= "CLIENT")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 
-public abstract class Client implements Serializable {
+public class Client {
     
     protected static final long serialVersionUID = 1L;
 
