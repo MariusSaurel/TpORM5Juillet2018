@@ -1,10 +1,13 @@
 package net.joastbg.sampleapp;
 
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import junit.framework.Assert;
 import net.joastbg.sampleapp.dao.ClientDao;
 import net.joastbg.sampleapp.dao.CompteDao;
 import net.joastbg.sampleapp.entities.CompteBancaire;
+import net.joastbg.sampleapp.exceptions.DaoException;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -47,6 +50,19 @@ public class CompteDaoTest {
         Assert.assertNotNull(compteFound);
         Assert.assertEquals(compte,compteFound);
         compteDao.delete(compte);
+    }
+    
+     @Test
+    public void ComptePrincipal(){
+        int tab[];
+        int ChoixComptePrincipale = 1;
+        try {
+           tab=compteDao.findByName("van");
+           compteDao.ComptePrincipal(tab, ChoixComptePrincipale);
+        } catch (DaoException ex) {
+            Logger.getLogger(CompteDaoTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
 
 }

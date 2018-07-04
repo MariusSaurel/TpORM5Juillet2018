@@ -22,6 +22,8 @@
         </property>
 								
         <property name="packagesToScan" value = "net.joastbg.sampleapp.entities"/>
+        <mapping class="net.joastbg.sampleapp.entities.Client"/>
+       
     </bean>
     
     <bean id="transactionManager" name="transactionManager" 

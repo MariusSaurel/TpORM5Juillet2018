@@ -5,7 +5,7 @@
 	<artifactId>sampleapp</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>Tp à rendre le 4 juillet max à mapping objets relationnels</name>
+	<name>Sample App Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<spring.version>3.0.5.RELEASE</spring.version>

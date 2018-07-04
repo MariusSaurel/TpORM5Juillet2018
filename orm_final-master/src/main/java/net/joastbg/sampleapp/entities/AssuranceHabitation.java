@@ -15,19 +15,18 @@ import javax.persistence.Table;
  * @author van christian
  */
 @Entity
-@Table(name = "AssuranceAuto")
+@Table(name = "AssuranceHabitation")
 @PrimaryKeyJoinColumn(name = "idAssurance")
-public class AssuranceAuto extends Assurance {
+public class AssuranceHabitation extends Assurance {
     
     private static final long serialVersionUID = 1L;
 
-    @Column(name = "Immatriculation")
-    private String Immatriculation;
-    @Column(name = "Bonus")
-    private int Bonus;
+    @Column(name = "Adresse")
+    private String Adresse;
+    @Column(name = "ValeurCouverture")
+    private int ValeurCouverture;
     
-    public AssuranceAuto(){
+    public AssuranceHabitation(){
         super();
     }
-    
 }

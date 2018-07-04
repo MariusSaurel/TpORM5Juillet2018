@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import net.joastbg.sampleapp.entities.CompteBancaire;
+import net.joastbg.sampleapp.exceptions.DaoException;
+import org.hibernate.Query;
 
 @Service
 @Transactional
@@ -26,4 +29,13 @@ public class ClientDao {
         Session session = sessionFactory.getCurrentSession();
         return  session.createQuery("from Client").list();
     }
+    public int AjoutListCompte(Client client){
+        Session session = sessionFactory.getCurrentSession();
+        int returnID = (Integer) session.save(client);
+        return returnID;
+    }
+    
+    
+    
+   
 }
