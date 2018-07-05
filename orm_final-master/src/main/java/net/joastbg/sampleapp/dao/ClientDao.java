@@ -10,6 +10,7 @@ import java.util.List;
 import static javassist.CtMethod.ConstParameter.string;
 import net.joastbg.sampleapp.entities.CompteBancaire;
 import net.joastbg.sampleapp.entities.Contact;
+import net.joastbg.sampleapp.entities.Echeances;
 import net.joastbg.sampleapp.entities.GestionContact;
 import net.joastbg.sampleapp.exceptions.DaoException;
 import org.hibernate.Query;
@@ -41,7 +42,15 @@ public class ClientDao {
         Session session = sessionFactory.getCurrentSession();
         String returnID = (String) session.save(gestion);
         return returnID;
+    }
+     
+     public String ajouterEcheance(Echeances echeance){ // ajouter un contact � un client (Gestion de contacts)
+        Session session = sessionFactory.getCurrentSession();
+        String returnID = (String) session.save(echeance);
+        return returnID;
     }  
+     
+     
      
      public Client findByName(String name) throws DaoException { // renvoi un client 
 		Session session = sessionFactory.getCurrentSession();

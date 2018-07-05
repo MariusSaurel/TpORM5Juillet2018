@@ -89,57 +89,7 @@ public class CompteDao {
        return result;
        
 	}
+   
     
-}
-
-    public int[] findByName(String name) throws DaoException {
-        Session session = sessionFactory.getCurrentSession();
-        Query q = session.createQuery("FROM Client WHERE nom = :name");
-        q.setString("name", name);
-        List l = q.list();
-        int[] tab = new int[4];
-
-        if (l.size() >= 1 && l.isEmpty() == false) {
-            for (int i = 0; i < l.size(); i++) {
-                tab[i] = ((Client) l.get(i)).getIdClient();
-            }
-        } else {
-
-            if (l.isEmpty() == false) {
-                tab[0] = ((Client) l.get(0)).getIdClient();
-            }
-        }
-        return tab;
-    }
-
-    public int ComptePrincipal(int[] id, int choix) throws DaoException {
-        Session session = sessionFactory.getCurrentSession();
-        String hql = "";
-        Query q;
-        List l = new ArrayList();
-
-        for (int i = 0; i < id.length; i++) {
-
-            q = session.createQuery("FROM Client WHERE idClient = :id[i]");
-            l = q.list();
-
-            if (choix == id[i] && id.length >= 1) {
-
-                hql = "UPDATE COMPTE_CLIENT set ComptePrincipal =:compte "
-                        + "WHERE id = :((Client)l.get(0)).getIdClient()";
-            } else {
-
-                hql = "UPDATE COMPTE_CLIENT set ComptePrincipal =:compte "
-                        + "WHERE id = :((Client)l.get(0)).getIdClient()";
-            }
-
-        }
-        Query query = session.createQuery(hql);
-        query.setParameter("compte", true);
-        int result = query.executeUpdate();
-
-        return result;
-
-    }
 
 }

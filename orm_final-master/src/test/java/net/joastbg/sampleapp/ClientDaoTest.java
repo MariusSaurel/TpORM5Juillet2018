@@ -59,6 +59,7 @@ public class ClientDaoTest {
        clientDao.AjoutListCompte(client);
     }
     
+    @Test
     public void testAjouterContact(){
         
       GestionContact contact=new GestionContact();
@@ -74,14 +75,16 @@ public class ClientDaoTest {
         }
     }
     
+    @Test
     public void testAjouterEcheance(){
         
       Echeances echeance=new Echeances();
       echeance.setPrix(23);
+      echeance.setDateEmission("05-07-2018");
+      echeance.setDatePaiement("05-07-2018");
+      echeance.setDateEmissionFacture("05-07-2018");
+      clientDao.ajouterEcheance(echeance);
       //echeance.setDateEmission("");
     }
-   
-
-
 
 }

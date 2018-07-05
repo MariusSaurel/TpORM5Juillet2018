@@ -86,6 +86,7 @@ public class Echeances {
     /**
      * @return the DateEmissionFacture
      */
+    
     public String getDateEmissionFacture() {
         return DateEmissionFacture;
     }
