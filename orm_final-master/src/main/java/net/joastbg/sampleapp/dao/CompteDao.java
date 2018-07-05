@@ -61,7 +61,7 @@ public class CompteDao {
 		}
                 return tab;
 	}
-    
+   
     public int ComptePrincipal(int[] id,int choix) throws DaoException {
        Session session = sessionFactory.getCurrentSession();
        String hql="";

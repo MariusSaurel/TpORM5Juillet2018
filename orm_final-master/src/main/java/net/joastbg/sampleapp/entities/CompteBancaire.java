@@ -1,9 +1,11 @@
 package net.joastbg.sampleapp.entities;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import net.joastbg.sampleapp.dao.CompteDao;
 
 
 
@@ -18,6 +20,7 @@ public class CompteBancaire {
     @Column
     private String swift_code;
 
+   
     /**
      * @return the iban
      */

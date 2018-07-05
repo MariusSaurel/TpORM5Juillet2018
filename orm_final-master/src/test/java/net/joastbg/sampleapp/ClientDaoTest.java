@@ -15,8 +15,14 @@ import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import net.joastbg.sampleapp.entities.CompteBancaire;
+import net.joastbg.sampleapp.entities.Contact;
+import net.joastbg.sampleapp.entities.Echeances;
+import net.joastbg.sampleapp.entities.GestionContact;
 import net.joastbg.sampleapp.entities.PersonneMorale;
+import net.joastbg.sampleapp.exceptions.DaoException;
 
 @TransactionConfiguration(transactionManager="transactionManager", defaultRollback=false)
 @Transactional
@@ -51,6 +57,28 @@ public class ClientDaoTest {
        client.setSiren("AATT");
        client.setCompte(d);
        clientDao.AjoutListCompte(client);
+    }
+    
+    public void testAjouterContact(){
+        
+      GestionContact contact=new GestionContact();
+      Contact element=new Contact();
+      element.setIdContact(1);
+      element.setTypeContact("Mail");
+      element.setValeur("Données internet");
+        try {
+            contact.setClient(clientDao.findByName("cathy cathou"));
+            contact.setContact(element);
+        } catch (DaoException ex) {
+            Logger.getLogger(ClientDaoTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void testAjouterEcheance(){
+        
+      Echeances echeance=new Echeances();
+      echeance.setPrix(23);
+      //echeance.setDateEmission("");
     }
    
 

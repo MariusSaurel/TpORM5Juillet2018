@@ -53,7 +53,7 @@ public class CompteDaoTest {
     }
     
      @Test
-    public void ComptePrincipal(){
+    public void ComptePrincipal(){ // Permet de selectionner un compte prinpal
         int tab[];
         int ChoixComptePrincipale = 1;
         try {
