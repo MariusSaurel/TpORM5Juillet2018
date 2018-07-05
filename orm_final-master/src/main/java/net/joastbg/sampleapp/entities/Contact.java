@@ -8,24 +8,23 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Contact")
+@Table(name = "Contact")
 public class Contact {
-    
-    
+
     private static long serialVersionUID = 1L;
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idContact")
     private int idContact;
-    
-    @Column(name="TypeContact")
+
+    @Column(name = "TypeContact")
     private String TypeContact;
-    @Column(name="valeur")
+    @Column(name = "valeur")
     private String valeur;
-    
-    public Contact(){
-        
+
+    public Contact() {
+
     }
 
     /**

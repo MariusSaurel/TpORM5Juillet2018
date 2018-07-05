@@ -6,7 +6,6 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
 import static javassist.CtMethod.ConstParameter.string;
 import net.joastbg.sampleapp.entities.CompteBancaire;
@@ -22,15 +21,15 @@ public class ClientDao {
     @Autowired
     SessionFactory sessionFactory;
 
-    public Long persist(Client client){
+    public Long persist(Client client) {
         Session session = sessionFactory.getCurrentSession();
         Long returnID = (Long) session.save(client);
         return returnID;
     }
 
-    public List<Client> findAll(){
+    public List<Client> findAll() {
         Session session = sessionFactory.getCurrentSession();
-        return  session.createQuery("from Client").list();
+        return session.createQuery("from Client").list();
     }
     public int AjoutListCompte(Client client){ // ajoute au client une liste de compte lui appartenant
         Session session = sessionFactory.getCurrentSession();
@@ -38,7 +37,7 @@ public class ClientDao {
         return returnID;
     }
     
-     public String ajouterContact(GestionContact gestion){ // ajouter un contact à un client (Gestion de contacts)
+     public String ajouterContact(GestionContact gestion){ // ajouter un contact ï¿½ un client (Gestion de contacts)
         Session session = sessionFactory.getCurrentSession();
         String returnID = (String) session.save(gestion);
         return returnID;
