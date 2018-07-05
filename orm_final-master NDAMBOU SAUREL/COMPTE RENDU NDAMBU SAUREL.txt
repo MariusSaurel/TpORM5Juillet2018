@@ -1,0 +1,5 @@
+Bonjour voici le projet ORM nous avons eu un problème de dernière minute car nous avions 3 test qui fonctionnaient mais à la dernière minute on a eu cette erreur : "Failed to load ApplicationContext"
+Nous n'avons pas eu le temps de s'y poser dessus, on ne comprend pas pourquoi cette erreur est apparue entre deux test.
+
+Cordialement 
+Marius , Christian
