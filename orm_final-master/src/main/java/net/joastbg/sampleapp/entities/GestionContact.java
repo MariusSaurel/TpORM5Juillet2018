@@ -33,7 +33,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 @Entity
 @Table(name= "CONTACT_GESTION")
-public class GestionContact { // me permet de gerer tous les contacts des clients 
+public class GestionContact implements Serializable { // me permet de gerer tous les contacts des clients 
     
     protected static final long serialVersionUID = 1L;
     
