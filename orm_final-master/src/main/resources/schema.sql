@@ -35,7 +35,6 @@ create TABLE ASSURANCE(
     DateSouscription varchar(20) not null,
     DateAnniversaire varchar(20) not null,
     DatePrelevement varchar(20) not null,
-    typeAssurance varchar(20) not null,
     PRIMARY KEY (idAssurance)
   );
 
