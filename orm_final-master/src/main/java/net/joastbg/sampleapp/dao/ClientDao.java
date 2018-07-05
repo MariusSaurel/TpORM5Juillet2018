@@ -20,25 +20,21 @@ public class ClientDao {
     @Autowired
     SessionFactory sessionFactory;
 
-    public Long persist(Client client){
+    public Long persist(Client client) {
         Session session = sessionFactory.getCurrentSession();
         Long returnID = (Long) session.save(client);
         return returnID;
     }
 
-    public List<Client> findAll(){
+    public List<Client> findAll() {
         Session session = sessionFactory.getCurrentSession();
-        return  session.createQuery("from Client").list();
+        return session.createQuery("from Client").list();
     }
-    public int AjoutListCompte(Client client){
+
+    public int AjoutListCompte(Client client) {
         Session session = sessionFactory.getCurrentSession();
         int returnID = (Integer) session.save(client);
         return returnID;
     }
-    
- 
-    
-    
-    
-   
+
 }

@@ -14,36 +14,31 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-
-
 @Entity
-@Table (name ="ASSURANCE")
+@Table(name = "ASSURANCE")
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Assurance  {
+public class Assurance {
 
-     
     protected static final long serialVersionUID = 1L;
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idAssurance")
     protected int idAssurance;
     @Column(name = "Numero")
     protected int Numero;
-    @Column(name="DateSouscription")
+    @Column(name = "DateSouscription")
     protected String DateSouscription;
-    @Column(name="DateAnniversaire")
+    @Column(name = "DateAnniversaire")
     protected String DateAnniversaire;
-    @Column(name="DatePrelevement")
+    @Column(name = "DatePrelevement")
     protected String DatePrelevement;
-    
+
     @OneToOne
     @JoinColumn(
-    name="AssuranceEcheanceID",
-    referencedColumnName="idEcheance")
+            name = "AssuranceEcheanceID",
+            referencedColumnName = "idEcheance")
     protected Echeances echeance;
-    
-    
 
     /**
      * @return the idAssurance
@@ -118,5 +113,4 @@ public class Assurance  {
     /**
      * @return the typeAssurance
      */
-    
 }

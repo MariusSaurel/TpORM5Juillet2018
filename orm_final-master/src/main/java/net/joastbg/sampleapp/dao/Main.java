@@ -12,8 +12,8 @@ import net.joastbg.sampleapp.entities.Client;
  * @author van christian
  */
 public class Main {
+
     public static void Main(String[] args) {
-        ClientDao c=new ClientDao();
-       
+        ClientDao c = new ClientDao();
     }
 }

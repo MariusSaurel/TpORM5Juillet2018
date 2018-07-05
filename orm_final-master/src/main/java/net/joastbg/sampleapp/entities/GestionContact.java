@@ -5,6 +5,7 @@
  */
 package net.joastbg.sampleapp.entities;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -23,7 +24,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name= "CONTACT_GESTION")
-public class GestionContact {
+public class GestionContact implements Serializable {
     
     protected static final long serialVersionUID = 1L;
     
