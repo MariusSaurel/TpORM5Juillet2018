@@ -8,7 +8,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import static javassist.CtMethod.ConstParameter.string;
 import net.joastbg.sampleapp.entities.CompteBancaire;
+import net.joastbg.sampleapp.entities.Contact;
 import net.joastbg.sampleapp.exceptions.DaoException;
 import org.hibernate.Query;
 
@@ -34,6 +36,8 @@ public class ClientDao {
         int returnID = (Integer) session.save(client);
         return returnID;
     }
+    
+ 
     
     
     

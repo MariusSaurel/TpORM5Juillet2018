@@ -8,6 +8,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name ="PersonneMorale")
 public class PersonneMorale extends Client  {
+
+   
     
     private static final long serialVersionUID = 1L;
     
@@ -16,6 +18,19 @@ public class PersonneMorale extends Client  {
     
     public PersonneMorale(){
         super();
+    }
+     /**
+     * @return the Siren
+     */
+    public String getSiren() {
+        return Siren;
+    }
+
+    /**
+     * @param Siren the Siren to set
+     */
+    public void setSiren(String Siren) {
+        this.Siren = Siren;
     }
     
 }

@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import net.joastbg.sampleapp.entities.CompteBancaire;
+import net.joastbg.sampleapp.entities.PersonneMorale;
 
 @TransactionConfiguration(transactionManager="transactionManager", defaultRollback=false)
 @Transactional
@@ -44,8 +45,10 @@ public class ClientDaoTest {
        d.add(C);
        d.add(l);
        d.add(f);
-       Client client=new Client();
+       PersonneMorale client=new PersonneMorale();
+       client.setIdClient(1);
        client.setNom("van");
+       client.setSiren("AATT");
        client.setCompte(d);
        clientDao.AjoutListCompte(client);
     }

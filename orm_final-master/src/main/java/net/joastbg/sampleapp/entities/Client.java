@@ -31,7 +31,7 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idClient")
     protected int idClient;
-    @Column
+    @Column(name="nom")
     protected String nom;
     
     @OneToMany(cascade = CascadeType.ALL)
@@ -48,7 +48,7 @@ public class Client {
             joinColumns = @JoinColumn(name = "idClient"),
             inverseJoinColumns = @JoinColumn(name = "idContact")
     )
-    protected Contact contact;
+    private List<Contact> contact;
     
     @OneToMany(cascade = CascadeType.ALL)
     @JoinTable(
@@ -101,16 +101,7 @@ public class Client {
     /**
      * @return the contact
      */
-    public Contact getContact() {
-        return contact;
-    }
-
-    /**
-     * @param contact the contact to set
-     */
-    public void setContact(Contact contact) {
-        this.contact = contact;
-    }
+   
 
     /**
      * @return the Compte
@@ -139,6 +130,20 @@ public class Client {
      */
     public void setAssurance(List<Assurance> assurance) {
         this.assurance = assurance;
+    }
+
+    /**
+     * @return the contact
+     */
+    public List<Contact> getContact() {
+        return contact;
+    }
+
+    /**
+     * @param contact the contact to set
+     */
+    public void setContact(List<Contact> contact) {
+        this.contact = contact;
     }
 
     /**

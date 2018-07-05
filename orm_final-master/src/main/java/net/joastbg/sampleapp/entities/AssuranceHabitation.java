@@ -18,7 +18,7 @@ import javax.persistence.Table;
 @Table(name = "AssuranceHabitation")
 @PrimaryKeyJoinColumn(name = "idAssurance")
 public class AssuranceHabitation extends Assurance {
-    
+
     private static final long serialVersionUID = 1L;
 
     @Column(name = "Adresse")
@@ -29,4 +29,34 @@ public class AssuranceHabitation extends Assurance {
     public AssuranceHabitation(){
         super();
     }
+    
+    
+    /**
+     * @return the Adresse
+     */
+    public String getAdresse() {
+        return Adresse;
+    }
+
+    /**
+     * @param Adresse the Adresse to set
+     */
+    public void setAdresse(String Adresse) {
+        this.Adresse = Adresse;
+    }
+
+    /**
+     * @return the ValeurCouverture
+     */
+    public int getValeurCouverture() {
+        return ValeurCouverture;
+    }
+
+    /**
+     * @param ValeurCouverture the ValeurCouverture to set
+     */
+    public void setValeurCouverture(int ValeurCouverture) {
+        this.ValeurCouverture = ValeurCouverture;
+    }
+    
 }

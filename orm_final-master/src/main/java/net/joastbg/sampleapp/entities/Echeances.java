@@ -26,4 +26,74 @@ public class Echeances {
     private String DatePaiement;
     @Column(name="DateEmissionFacture")
     private String DateEmissionFacture;
+
+    /**
+     * @return the idEcheance
+     */
+    public int getIdEcheance() {
+        return idEcheance;
+    }
+
+    /**
+     * @param idEcheance the idEcheance to set
+     */
+    public void setIdEcheance(int idEcheance) {
+        this.idEcheance = idEcheance;
+    }
+
+    /**
+     * @return the prix
+     */
+    public float getPrix() {
+        return prix;
+    }
+
+    /**
+     * @param prix the prix to set
+     */
+    public void setPrix(float prix) {
+        this.prix = prix;
+    }
+
+    /**
+     * @return the DateEmission
+     */
+    public String getDateEmission() {
+        return DateEmission;
+    }
+
+    /**
+     * @param DateEmission the DateEmission to set
+     */
+    public void setDateEmission(String DateEmission) {
+        this.DateEmission = DateEmission;
+    }
+
+    /**
+     * @return the DatePaiement
+     */
+    public String getDatePaiement() {
+        return DatePaiement;
+    }
+
+    /**
+     * @param DatePaiement the DatePaiement to set
+     */
+    public void setDatePaiement(String DatePaiement) {
+        this.DatePaiement = DatePaiement;
+    }
+
+    /**
+     * @return the DateEmissionFacture
+     */
+    public String getDateEmissionFacture() {
+        return DateEmissionFacture;
+    }
+
+    /**
+     * @param DateEmissionFacture the DateEmissionFacture to set
+     */
+    public void setDateEmissionFacture(String DateEmissionFacture) {
+        this.DateEmissionFacture = DateEmissionFacture;
+    }
 }

@@ -36,6 +36,7 @@ public class CompteDao {
         Session session= sessionFactory.getCurrentSession();
         session.delete(compteBancaire);
     }
+    public 
 
     void persist(String rr, String christian, String aa) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -93,3 +94,5 @@ public class CompteDao {
 	}
     
 }
+
+
